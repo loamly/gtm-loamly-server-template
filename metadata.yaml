@@ -1,5 +1,5 @@
 homepage: "https://loamly.ai"
 documentation: "https://loamly.ai/docs/integrations/gtm"
 versions:
-  - sha: 63b93204442d027c7d1ab70b19888945fe66df7d
-    changeNotes: Simplify permissions to match PostHog pattern - minimal 2 permissions only
+  - sha: d3bd1d93bcd037c086ae428ce2bdad8b07fed2be
+    changeNotes: Template exported from GTM Template Editor with proper metadata
