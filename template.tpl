@@ -1,4 +1,4 @@
-﻿___TERMS_OF_SERVICE___
+___TERMS_OF_SERVICE___
 
 By creating or modifying this file you agree to Google Tag Manager's Community
 Template Gallery Developer Terms of Service available at
@@ -71,6 +71,7 @@ ___SANDBOXED_JS_FOR_SERVER___
 
 const sendHttpRequest = require('sendHttpRequest');
 const getEventData = require('getEventData');
+const getRequestHeader = require('getRequestHeader');
 const getTimestampMillis = require('getTimestampMillis');
 const JSON = require('JSON');
 const makeString = require('makeString');
@@ -110,12 +111,19 @@ if (screenResolution && screenResolution.indexOf('x') > -1) {
 }
 
 // Capture RFC 9421 HTTP Message Signatures (for AI agent detection)
-// Note: Requires read_request permission if headers need to be accessed
 let rfc9421Signature = null;
 if (captureRfc9421) {
-  // RFC 9421 headers are available via getRequestHeader API
-  // This requires read_request permission
-  rfc9421Signature = null; // Disabled to match minimal permission set
+  // RFC 9421 headers: signature and signature-input
+  const signature = getRequestHeader('signature');
+  const signatureInput = getRequestHeader('signature-input');
+  if (signature) {
+    rfc9421Signature = signature;
+    if (signatureInput) {
+      rfc9421Signature = signature + '; ' + signatureInput;
+    }
+  } else if (signatureInput) {
+    rfc9421Signature = signatureInput;
+  }
 }
 
 // Build idempotency key to prevent duplicates
@@ -230,6 +238,27 @@ ___SERVER_PERMISSIONS___
       "param": [
         {
           "key": "allowedUrls",
+          "value": {
+            "type": 1,
+            "string": "any"
+          }
+        }
+      ]
+    },
+    "clientAnnotations": {
+      "isEditedByUser": true
+    },
+    "isRequired": true
+  },
+  {
+    "instance": {
+      "key": {
+        "publicId": "read_request",
+        "versionId": "1"
+      },
+      "param": [
+        {
+          "key": "requestAccess",
           "value": {
             "type": 1,
             "string": "any"
