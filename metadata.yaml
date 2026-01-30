@@ -1,5 +1,5 @@
 homepage: "https://loamly.ai"
 documentation: "https://loamly.ai/docs/integrations/gtm"
 versions:
-  - sha: e445be1db5187aa80ad3880f722842d0a3813dfd
+  - sha: fcef4ee7132febbd4b3175f0133106090391a33a
     changeNotes: Initial release.
