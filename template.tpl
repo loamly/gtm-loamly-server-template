@@ -84,14 +84,6 @@ ___TEMPLATE_PARAMETERS___
     "defaultValue": true,
     "help": "When enabled, captures HTTP signature headers from AI agents (ChatGPT, etc.) for verification."
   },
-  {
-    "type": "CHECKBOX",
-    "name": "enableLogging",
-    "displayName": "Enable Debug Logging",
-    "simpleValueType": true,
-    "defaultValue": false,
-    "help": "Log debug information to the server container console."
-  }
 ]
 
 
@@ -99,11 +91,8 @@ ___SANDBOXED_JS_FOR_SERVER___
 
 const sendHttpRequest = require('sendHttpRequest');
 const getEventData = require('getEventData');
-const getRequestHeader = require('getRequestHeader');
-const getClientName = require('getClientName');
 const getTimestampMillis = require('getTimestampMillis');
 const JSON = require('JSON');
-const logToConsole = require('logToConsole');
 const makeString = require('makeString');
 const generateRandom = require('generateRandom');
 
@@ -112,20 +101,8 @@ const workspaceId = data.workspaceId;
 const apiKey = data.apiKey;
 const eventType = data.eventType || 'pageview';
 const captureRfc9421 = data.captureRfc9421;
-const enableLogging = data.enableLogging;
 
-// Helper function for logging
-const log = function(message, data) {
-  if (enableLogging) {
-    if (data !== undefined) {
-      logToConsole('[Loamly sGTM] ' + message, data);
-    } else {
-      logToConsole('[Loamly sGTM] ' + message);
-    }
-  }
-};
-
-log('Processing event...');
+// Logging removed to simplify permissions
 
 // Extract standard event data from GA4 Client
 const clientId = getEventData('client_id') || '';
@@ -133,7 +110,7 @@ const sessionId = getEventData('ga_session_id') || getEventData('session_id') ||
 const pageUrl = getEventData('page_location') || '';
 const pageTitle = getEventData('page_title') || '';
 const pageReferrer = getEventData('page_referrer') || '';
-const userAgent = getEventData('user_agent') || getRequestHeader('user-agent') || '';
+const userAgent = getEventData('user_agent') || '';
 const eventName = getEventData('event_name') || 'page_view';
 const language = getEventData('language') || '';
 
@@ -155,20 +132,12 @@ if (screenResolution && screenResolution.indexOf('x') > -1) {
 }
 
 // Capture RFC 9421 HTTP Message Signatures (for AI agent detection)
+// Note: Requires read_request permission if headers need to be accessed
 let rfc9421Signature = null;
 if (captureRfc9421) {
-  const signature = getRequestHeader('signature');
-  const signatureInput = getRequestHeader('signature-input');
-  const signatureAgent = getRequestHeader('signature-agent');
-  
-  if (signature && signatureInput) {
-    rfc9421Signature = {
-      signature: signature,
-      signature_input: signatureInput,
-      signature_agent: signatureAgent || null
-    };
-    log('RFC 9421 signature detected from:', signatureAgent);
-  }
+  // RFC 9421 headers are available via getRequestHeader API
+  // This requires read_request permission
+  rfc9421Signature = null; // Disabled to match minimal permission set
 }
 
 // Build idempotency key to prevent duplicates
@@ -218,11 +187,10 @@ const payload = {
   event_name: eventName,
   timestamp: makeString(timestamp),
   rfc9421_signature: rfc9421Signature,
-  sgtm_client: getClientName() || 'unknown',
   idempotency_key: idempotencyKey
 };
 
-log('Sending payload:', JSON.stringify(payload));
+// Sending payload to Loamly API
 
 // Send to Loamly API
 const url = 'https://app.loamly.ai/api/ingest/visit';
@@ -231,11 +199,8 @@ sendHttpRequest(
   url,
   function(statusCode, headers, body) {
     if (statusCode >= 200 && statusCode < 300) {
-      log('Success - Status:', statusCode);
       data.gtmOnSuccess();
     } else {
-      log('Error - Status:', statusCode);
-      log('Response:', body);
       data.gtmOnFailure();
     }
   },
@@ -255,16 +220,6 @@ sendHttpRequest(
 ___SERVER_PERMISSIONS___
 
 [
-  {
-    "instance": {
-      "key": {
-        "publicId": "read_container_data",
-        "versionId": "1"
-      },
-      "param": []
-    },
-    "isRequired": true
-  },
   {
     "instance": {
       "key": {
@@ -310,62 +265,6 @@ ___SERVER_PERMISSIONS___
           "value": {
             "type": 1,
             "string": "any"
-          }
-        }
-      ]
-    },
-    "clientAnnotations": {
-      "isEditedByUser": true
-    },
-    "isRequired": true
-  },
-  {
-    "instance": {
-      "key": {
-        "publicId": "read_request",
-        "versionId": "1"
-      },
-      "param": [
-        {
-          "key": "requestAccess",
-          "value": {
-            "type": 1,
-            "string": "any"
-          }
-        },
-        {
-          "key": "headerAccess",
-          "value": {
-            "type": 1,
-            "string": "any"
-          }
-        },
-        {
-          "key": "queryParameterAccess",
-          "value": {
-            "type": 1,
-            "string": "any"
-          }
-        }
-      ]
-    },
-    "clientAnnotations": {
-      "isEditedByUser": true
-    },
-    "isRequired": true
-  },
-  {
-    "instance": {
-      "key": {
-        "publicId": "logging",
-        "versionId": "1"
-      },
-      "param": [
-        {
-          "key": "environments",
-          "value": {
-            "type": 1,
-            "string": "all"
           }
         }
       ]
