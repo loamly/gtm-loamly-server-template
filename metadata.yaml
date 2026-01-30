@@ -1,5 +1,8 @@
 homepage: "https://loamly.ai"
 documentation: "https://loamly.ai/docs/integrations/gtm"
 versions:
+  - sha: 2708f0453dfb8790b26957703b418ba423cb694d
+    changeNotes: Add UTF-8 BOM for GTM Community Gallery compatibility.
   - sha: 946196d8f622927068a897f350dea51b2a51b711
     changeNotes: Fix sandbox compatibility for GTM Community Gallery.
+
