@@ -226,36 +226,45 @@ log('Sending payload:', JSON.stringify(payload));
 
 // Send to Loamly API
 const url = 'https://app.loamly.ai/api/ingest/visit';
-const options = {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'X-Loamly-Api-Key': apiKey,
-    'X-Idempotency-Key': idempotencyKey
-  },
-  timeout: 5000
-};
 
-sendHttpRequest(url, options, JSON.stringify(payload))
-  .then(function(response) {
-    if (response.statusCode >= 200 && response.statusCode < 300) {
-      log('Success - Status:', response.statusCode);
+sendHttpRequest(
+  url,
+  function(statusCode, headers, body) {
+    if (statusCode >= 200 && statusCode < 300) {
+      log('Success - Status:', statusCode);
       data.gtmOnSuccess();
     } else {
-      log('Error - Status:', response.statusCode);
-      log('Response:', response.body);
+      log('Error - Status:', statusCode);
+      log('Response:', body);
       data.gtmOnFailure();
     }
-  })
-  .catch(function(error) {
-    log('Request failed:', error);
-    data.gtmOnFailure();
-  });
+  },
+  {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Loamly-Api-Key': apiKey,
+      'X-Idempotency-Key': idempotencyKey
+    },
+    timeout: 5000
+  },
+  JSON.stringify(payload)
+);
 
 
 ___SERVER_PERMISSIONS___
 
 [
+  {
+    "instance": {
+      "key": {
+        "publicId": "read_container_data",
+        "versionId": "1"
+      },
+      "param": []
+    },
+    "isRequired": true
+  },
   {
     "instance": {
       "key": {
