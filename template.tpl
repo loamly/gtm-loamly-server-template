@@ -14,14 +14,19 @@ ___INFO___
   "version": 1,
   "securityGroups": [],
   "displayName": "Loamly Analytics (Server-Side)",
-  "categories": ["ANALYTICS", "ATTRIBUTION"],
+  "categories": [
+    "ANALYTICS",
+    "ATTRIBUTION"
+  ],
   "brand": {
-    "id": "brand_loamly",
+    "id": "brand_dummy",
     "displayName": "Loamly",
     "thumbnail": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAHhlWElmTU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAADCgAwAEAAAAAQAAADAAAAAA6LhYOwAAAAlwSFlzAAALEwAACxMBAJqcGAAAA2VJREFUaAXtmMtvTUEcx68qinql4hVVywpCwoaVSGyuP0CCdGVTCWWjFtJFF4SFhV3ZWRFJhYREIm1CbBsJVlKSeqbEW0LQ+nyvO3p6nDmvO/eOm9xf8rnnnHn85vedmTP3zBQKybaYIldhssqM4L8ITeDUTuCt2sEH/V+ivVaXCrpqLEBirrkUoSEdqHcR8xAwVO8i2hEw6kHEddp09k5sw9knDyJi34nZBHQEuqEFkkwv9QQEV45a3FtFXAgEc5f7rZBkJylQi6DDbUROp3ChzwR3HDQyNmsmYxDCdWvx/I8IW6PDBLjZpoD0NrgPtvp507/jM2mKajppZSzMADVkM72w/XAOfkQUWk+altdlEXlRSb9I1Ai/hzfwEl7AM3hefn7NtRP0jxw3C86Q35skgDIlu83vUXj453Ha726eLoKWOgX3Ed7COLwCBSYUqIJT3gf4CjbbQcYtiBPwhfyNkHoKvKPsYZipSiHr4HkdLIfS0IbyszwWKSyRaabgQTlOUzBY5iZ1FGw1bD9ONTLB9uLuxxREXAFbnnporyo7tB58/QRbm7b0zBWMo8c0NseRAC3bxm/Wa+6KT2i00vku/S3wFLIGXiqvT+W8JgcuTDHk9lWJABfBGx91L8AIyXz9X0Ygc+CmQkOA6Qlf18YI+Op5025jBExP+Lo2RsBXz5t2KxkBbWxyfwKYAMpX7QxzWSUCtGf9lqvV6ZW0Txa5Tb2YlX7q5O61iEi1OdImP2scpRkwlqGiTia0c6qGdeL0BmQVUdDGOE0lnTjsg0pMGyBt/LWn7ohwpPfqEOgAIU1Mk5oGa+EBtILN5GwPXLEVIH0uLIKlsAJWQTusKd/r7Eh5KrMAdCzSBer1sG0g4SzsCmeEn808Pk3GsXBm4FkCDsA9UA8quNWgAHVdCQpwCSyEZkhj4xTaCY8iCsuHjnH6QKJjTUOr47qkYdOqk1Qma76OJ9vAZpvIGAKb37/1NIXSiLA5qiR9kLbjRk0ndL2go85wOyRNmU8Rp6bCsN5tIecOGBHno0r6EjFBMHqpk0zHMN3QA7NshX2J0BTZbgsqa7ovEaMEqtXNifkSMUz0WhmdmC8RA0Tf5EQBTuaDjyU28aVOq1Bn9voOugy1NGfvgglanx5FGAGzFlfrqj+3xE+I3wEvk0VZj2gQAAAAAElFTkSuQmCC"
   },
   "description": "Send pageviews to Loamly server-side. Detects AI agents via HTTP headers.",
-  "containerContexts": ["SERVER"]
+  "containerContexts": [
+    "SERVER"
+  ]
 }
 
 
