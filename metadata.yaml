@@ -1,5 +1,5 @@
 homepage: "https://loamly.ai"
 documentation: "https://loamly.ai/docs/integrations/gtm"
 versions:
-  - sha: d3bd1d93bcd037c086ae428ce2bdad8b07fed2be
-    changeNotes: Template exported from GTM Template Editor with proper metadata
+  - sha: a196dea26228a3ea9e5d440f0691d30941cde9ea
+    changeNotes: Enable RFC 9421 HTTP signature capture with read_request permission - full feature set restored
