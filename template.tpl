@@ -216,7 +216,7 @@ const payload = {
   tracker_version: 'sgtm-1.0.0',
   event_type: eventType,
   event_name: eventName,
-  timestamp: new Date(timestamp).toISOString(),
+  timestamp: makeString(timestamp),
   rfc9421_signature: rfc9421Signature,
   sgtm_client: getClientName() || 'unknown',
   idempotency_key: idempotencyKey
