@@ -1,0 +1,6 @@
+homepage: "https://loamly.ai"
+documentation: "https://loamly.ai/docs/integrations/gtm"
+versions:
+  # Add SHA after first commit to GitHub
+  # - sha: COMMIT_SHA_HERE
+  #   changeNotes: Initial release. Loamly server-side GTM tag with RFC 9421 signature support.
