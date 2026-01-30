@@ -1,5 +1,5 @@
 homepage: "https://loamly.ai"
 documentation: "https://loamly.ai/docs/integrations/gtm"
 versions:
-  - sha: 558dfaac048cc76339d47b7a7aca02794721ba5c
-    changeNotes: Initial release. Loamly GTM server-side tag with RFC 9421 support.
+  - sha: 4fe8347c499c9abff6f38ca7f72403d0e400e034
+    changeNotes: Initial release.
