@@ -1,5 +1,12 @@
 homepage: "https://loamly.ai"
 documentation: "https://loamly.ai/docs/integrations/gtm"
 versions:
+  - sha: bb9b8d0b556590d867b5417b6a190ad602f68026
+    changeNotes: |2
+      v2.0.0: Production-grade AI bot detection + RFC 9421.
+      Read raw HTTP headers via getRequestHeader().
+      Detect 9+ AI bot families via User-Agent.
+      RFC 9421 signatures as structured objects.
+      Added categories for Gallery compliance.
   - sha: a196dea26228a3ea9e5d440f0691d30941cde9ea
     changeNotes: Enable RFC 9421 HTTP signature capture with read_request permission - full feature set restored
