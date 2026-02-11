@@ -11,15 +11,19 @@ ___INFO___
 {
   "type": "TAG",
   "id": "cvt_temp_public_id",
-  "version": 1,
+  "version": 2,
   "securityGroups": [],
-  "displayName": "Loamly Analytics",
+  "displayName": "Loamly Analytics (Server-Side)",
+  "categories": [
+    "ANALYTICS",
+    "ATTRIBUTION"
+  ],
   "brand": {
-    "id": "brand_dummy",
-    "displayName": "",
-    "thumbnail": "data:image/png;base64,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\u003d"
+    "id": "brand_loamly",
+    "displayName": "Loamly",
+    "thumbnail": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAHhlWElmTU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAADCgAwAEAAAAAQAAADAAAAAA6LhYOwAAAAlwSFlzAAALEwAACxMBAJqcGAAAA2VJREFUaAXtmMtvTUEcx68qinql4hVVywpCwoaVSGyuP0CCdGVTCWWjFtJFF4SFhV3ZWRFJhYREIm1CbBsJVlKSeqbEW0LQ+nyvO3p6nDmvO/eOm9xf8rnnnHn85vedmTP3zBQKybaYIldhssqM4L8ITeDUTuCt2sEH/V+ivVaXCrpqLEBirrkUoSEdqHcR8xAwVO8i2hEw6kHEddp09k5sw9knDyJi34nZBHQEuqEFkkwv9QQEV45a3FtFXAgEc5f7rZBkJylQi6DDbUROp3ChzwR3HDQyNmsmYxDCdWvx/I8IW6PDBLjZpoD0NrgPtvp507/jM2mKajppZSzMADVkM72w/XAOfkQUWk+altdlEXlRSb9I1Ai/hzfwEl7AM3hefn7NtRP0jxw3C86Q35skgDIlu83vUXj453Ha726eLoKWOgX3Ed7COLwCBSYUqIJT3gf4CjbbQcYtiBPwhfyNkHoKvKPsYZipSiHr4HkdLIfS0IbyszwWKSyRaabgQTlOUzBY5iZ1FGw1bD9ONTLB9uLuxxREXAFbnnporyo7tB58/QRbm7b0zBWMo8c0NseRAC3bxm/Wa+6KT2i00vku/S3wFLIGXiqvT+W8JgcuTDHk9lWJABfBGx91L8AIyXz9X0Ygc+CmQkOA6Qlf18YI+Op5025jBExP+Lo2RsBXz5t2KxkBbWxyfwKYAMpX7QxzWSUCtGf9lqvV6ZW0Txa5Tb2YlX7q5O61iEi1OdImP2scpRkwlqGiTia0c6qGdeL0BmQVUdDGOE0lnTjsg0pMGyBt/LWn7ohwpPfqEOgAIU1Mk5oGa+EBtILN5GwPXLEVIH0uLIKlsAJWQTusKd/r7Eh5KrMAdCzSBer1sG0g4SzsCmeEn808Pk3GsXBm4FkCDsA9UA8quNWgAHVdCQpwCSyEZkhj4xTaCY8iCsuHjnH6QKJjTUOr47qkYdOqk1Qma76OJ9vAZpvIGAKb37/1NIXSiLA5qiR9kLbjRk0ndL2go85wOyRNmU8Rp6bCsN5tIecOGBHno0r6EjFBMHqpk0zHMN3QA7NshX2J0BTZbgsqa7ovEaMEqtXNifkSMUz0WhmdmC8RA0Tf5EQBTuaDjyU28aVOq1Bn9voOugy1NGfvgglanx5FGAGzFlfrqj+3xE+I3wEvk0VZj2gQAAAAAElFTkSuQmCC"
   },
-  "description": "Send pageviews to Loamly server-side. Detects AI agents via HTTP headers.",
+  "description": "Track pageviews, detect AI bots via User-Agent, and capture RFC 9421 signatures from ChatGPT, Claude, Perplexity, and Gemini.",
   "containerContexts": [
     "SERVER"
   ]
@@ -32,37 +36,55 @@ ___TEMPLATE_PARAMETERS___
   {
     "type": "TEXT",
     "name": "workspaceId",
-    "displayName": "",
-    "simpleValueType": true
+    "displayName": "Workspace ID",
+    "simpleValueType": true,
+    "valueValidators": [{ "type": "NON_EMPTY" }],
+    "help": "Your Loamly Workspace ID. Find this in Loamly Settings → Workspace.",
+    "alwaysInSummary": true
   },
   {
     "type": "TEXT",
     "name": "apiKey",
-    "displayName": "",
-    "simpleValueType": true
+    "displayName": "API Key",
+    "simpleValueType": true,
+    "valueValidators": [{ "type": "NON_EMPTY" }],
+    "help": "Your Loamly Public API Key. Find this in Loamly Settings → API Keys."
   },
   {
     "type": "SELECT",
     "name": "eventType",
-    "displayName": "",
-    "macrosInSelect": true,
+    "displayName": "Event Type",
+    "simpleValueType": true,
+    "defaultValue": "pageview",
     "selectItems": [
-      {
-        "value": "pageview",
-        "displayValue": "Pageview"
-      },
-      {
-        "value": "event",
-        "displayValue": "Custom Event"
-      }
+      { "value": "pageview", "displayValue": "Pageview" },
+      { "value": "event", "displayValue": "Custom Event" }
     ],
-    "simpleValueType": true
+    "help": "The type of event to send to Loamly."
   },
   {
     "type": "CHECKBOX",
     "name": "captureRfc9421",
-    "checkboxText": "captureRfc9421",
-    "simpleValueType": true
+    "displayName": "Capture RFC 9421 Signatures",
+    "simpleValueType": true,
+    "defaultValue": true,
+    "help": "Reads Signature and Signature-Input HTTP headers from AI agents and forwards them to Loamly for verification."
+  },
+  {
+    "type": "CHECKBOX",
+    "name": "detectBotUa",
+    "displayName": "Detect AI Bot User-Agents",
+    "simpleValueType": true,
+    "defaultValue": true,
+    "help": "Checks the raw HTTP User-Agent header for known AI bots (ChatGPT-User, ClaudeBot, PerplexityBot, GPTBot, Googlebot-Extended, Gemini-Deep-Research)."
+  },
+  {
+    "type": "CHECKBOX",
+    "name": "enableDebug",
+    "displayName": "Enable Debug Logging",
+    "simpleValueType": true,
+    "defaultValue": false,
+    "help": "Logs debug information to the sGTM server console."
   }
 ]
 
@@ -76,88 +98,164 @@ const getTimestampMillis = require('getTimestampMillis');
 const JSON = require('JSON');
 const makeString = require('makeString');
 const generateRandom = require('generateRandom');
+const log = require('logToConsole');
 
 // Configuration from template fields
 const workspaceId = data.workspaceId;
 const apiKey = data.apiKey;
 const eventType = data.eventType || 'pageview';
 const captureRfc9421 = data.captureRfc9421;
+const detectBotUa = data.detectBotUa;
+const enableDebug = data.enableDebug;
 
-// Extract standard event data from GA4 Client
-const clientId = getEventData('client_id') || '';
-const sessionId = getEventData('ga_session_id') || getEventData('session_id') || '';
-const pageUrl = getEventData('page_location') || '';
-const pageTitle = getEventData('page_title') || '';
-const pageReferrer = getEventData('page_referrer') || '';
-const userAgent = getEventData('user_agent') || '';
-const eventName = getEventData('event_name') || 'page_view';
-const language = getEventData('language') || '';
+// ========================================================================
+// 1. READ RAW HTTP HEADERS (the whole point of server-side tracking)
+// ========================================================================
+const rawUserAgent = getRequestHeader('user-agent') || '';
+const rawReferer = getRequestHeader('referer') || '';
 
-// Extract UTM parameters
-const utmSource = getEventData('utm_source') || getEventData('campaign_source') || null;
-const utmMedium = getEventData('utm_medium') || getEventData('campaign_medium') || null;
-const utmCampaign = getEventData('utm_campaign') || getEventData('campaign_name') || null;
-const utmTerm = getEventData('utm_term') || getEventData('campaign_term') || null;
-const utmContent = getEventData('utm_content') || getEventData('campaign_content') || null;
+// ========================================================================
+// 2. AI BOT USER-AGENT DETECTION
+// ========================================================================
+// Matches: cloudflare/rfc9421-verifier/src/index.ts lines 80-91
+// Matches: fly-proxy/cmd/proxy/main.go bot detection logic
+var detectedBot = null;
+var botProvider = null;
 
-// Extract screen resolution
-const screenResolution = getEventData('screen_resolution') || '';
-let screenWidth = null;
-let screenHeight = null;
+if (detectBotUa && rawUserAgent) {
+  var uaLower = rawUserAgent.toLowerCase();
+  if (uaLower.indexOf('chatgpt-user') > -1 || uaLower.indexOf('chatgpt.com') > -1) {
+    detectedBot = 'chatgpt-user';
+    botProvider = 'https://chatgpt.com';
+  } else if (uaLower.indexOf('gptbot') > -1) {
+    detectedBot = 'gptbot';
+    botProvider = 'https://chatgpt.com';
+  } else if (uaLower.indexOf('perplexitybot') > -1 || uaLower.indexOf('perplexity-user') > -1) {
+    detectedBot = 'perplexitybot';
+    botProvider = 'https://perplexity.ai';
+  } else if (uaLower.indexOf('claudebot') > -1 || uaLower.indexOf('claude-user') > -1) {
+    detectedBot = 'claudebot';
+    botProvider = 'https://claude.ai';
+  } else if (uaLower.indexOf('anthropic-ai') > -1 || uaLower.indexOf('anthropic.com') > -1) {
+    detectedBot = 'anthropic-bot';
+    botProvider = 'https://claude.ai';
+  } else if (uaLower.indexOf('google-extended') > -1) {
+    detectedBot = 'google-extended';
+    botProvider = 'https://gemini.google.com';
+  } else if (uaLower.indexOf('gemini-deep-research') > -1) {
+    detectedBot = 'gemini-deep-research';
+    botProvider = 'https://gemini.google.com';
+  } else if (uaLower.indexOf('meta-externalagent') > -1) {
+    detectedBot = 'meta-externalagent';
+    botProvider = 'https://meta.ai';
+  } else if (uaLower.indexOf('applebot-extended') > -1) {
+    detectedBot = 'applebot-extended';
+    botProvider = 'https://apple.com';
+  } else if (uaLower.indexOf('cohere-ai') > -1) {
+    detectedBot = 'cohere-ai';
+    botProvider = 'https://cohere.com';
+  }
+}
+
+if (enableDebug && detectedBot) {
+  log('[Loamly sGTM] AI bot detected:', detectedBot, 'provider:', botProvider);
+}
+
+// ========================================================================
+// 3. RFC 9421 HTTP MESSAGE SIGNATURES
+// ========================================================================
+// MUST be structured object to match /api/ingest/visit expected shape
+// Reference: src/app/api/ingest/visit/route.ts lines 842-843
+var rfc9421Signature = null;
+
+if (captureRfc9421) {
+  var sigHeader = getRequestHeader('signature');
+  var sigInputHeader = getRequestHeader('signature-input');
+  var sigAgentHeader = getRequestHeader('signature-agent');
+
+  if (sigHeader || sigInputHeader) {
+    rfc9421Signature = {
+      signature: sigHeader || null,
+      signature_input: sigInputHeader || null,
+      signature_agent: sigAgentHeader || null
+    };
+    if (enableDebug) {
+      log('[Loamly sGTM] RFC 9421 captured:',
+        'sig=' + (sigHeader ? 'yes' : 'no'),
+        'input=' + (sigInputHeader ? 'yes' : 'no'),
+        'agent=' + (sigAgentHeader || 'none'));
+    }
+    if (sigAgentHeader && !botProvider) {
+      if (sigAgentHeader.indexOf('chatgpt.com') > -1 || sigAgentHeader.indexOf('openai.com') > -1) {
+        botProvider = 'https://chatgpt.com';
+        detectedBot = 'rfc9421-chatgpt';
+      } else if (sigAgentHeader.indexOf('anthropic.com') > -1) {
+        botProvider = 'https://claude.ai';
+        detectedBot = 'rfc9421-claude';
+      } else if (sigAgentHeader.indexOf('perplexity.ai') > -1) {
+        botProvider = 'https://perplexity.ai';
+        detectedBot = 'rfc9421-perplexity';
+      } else if (sigAgentHeader.indexOf('google.com') > -1) {
+        botProvider = 'https://gemini.google.com';
+        detectedBot = 'rfc9421-gemini';
+      }
+    }
+  }
+}
+
+// ========================================================================
+// 4. EXTRACT GA4 EVENT DATA (standard browser traffic)
+// ========================================================================
+var clientId = getEventData('client_id') || '';
+var sessionId = getEventData('ga_session_id') || getEventData('session_id') || '';
+var pageUrl = getEventData('page_location') || '';
+var pageTitle = getEventData('page_title') || '';
+var pageReferrer = getEventData('page_referrer') || rawReferer || '';
+var eventName = getEventData('event_name') || 'page_view';
+var language = getEventData('language') || '';
+var userAgent = rawUserAgent || getEventData('user_agent') || '';
+
+var utmSource = getEventData('utm_source') || getEventData('campaign_source') || null;
+var utmMedium = getEventData('utm_medium') || getEventData('campaign_medium') || null;
+var utmCampaign = getEventData('utm_campaign') || getEventData('campaign_name') || null;
+var utmTerm = getEventData('utm_term') || getEventData('campaign_term') || null;
+var utmContent = getEventData('utm_content') || getEventData('campaign_content') || null;
+
+var screenResolution = getEventData('screen_resolution') || '';
+var screenWidth = null;
+var screenHeight = null;
 if (screenResolution && screenResolution.indexOf('x') > -1) {
-  const parts = screenResolution.split('x');
+  var parts = screenResolution.split('x');
   screenWidth = parts[0] || null;
   screenHeight = parts[1] || null;
 }
 
-// Capture RFC 9421 HTTP Message Signatures (for AI agent detection)
-let rfc9421Signature = null;
-if (captureRfc9421) {
-  // RFC 9421 headers: signature and signature-input
-  const signature = getRequestHeader('signature');
-  const signatureInput = getRequestHeader('signature-input');
-  if (signature) {
-    rfc9421Signature = signature;
-    if (signatureInput) {
-      rfc9421Signature = signature + '; ' + signatureInput;
-    }
-  } else if (signatureInput) {
-    rfc9421Signature = signatureInput;
-  }
-}
+// ========================================================================
+// 5. BUILD IDEMPOTENCY KEY + EXTRACT PAGE PATH
+// ========================================================================
+var timestamp = getTimestampMillis();
+var random = generateRandom(100000, 999999);
+var idempotencyKey = 'sgtm:' + (clientId || 'bot') + ':' + makeString(timestamp) + ':' + makeString(random);
 
-// Build idempotency key to prevent duplicates
-const timestamp = getTimestampMillis();
-const random = generateRandom(100000, 999999);
-const idempotencyKey = 'sgtm:' + clientId + ':' + timestamp + ':' + makeString(random);
-
-// Extract page path from URL
-// GTM sandboxed JS doesn't support try/catch or regex literals
-let pagePath = null;
+var pagePath = '/';
 if (pageUrl) {
-  // Simple path extraction - URL starts with protocol
-  let urlWithoutProtocol = pageUrl;
-  if (urlWithoutProtocol.indexOf('https://') === 0) {
-    urlWithoutProtocol = urlWithoutProtocol.substring(8);
-  } else if (urlWithoutProtocol.indexOf('http://') === 0) {
-    urlWithoutProtocol = urlWithoutProtocol.substring(7);
+  var u = pageUrl;
+  if (u.indexOf('https://') === 0) { u = u.substring(8); }
+  else if (u.indexOf('http://') === 0) { u = u.substring(7); }
+  var ps = u.indexOf('/');
+  if (ps > -1) {
+    var pwq = u.substring(ps);
+    var qs = pwq.indexOf('?');
+    pagePath = qs > -1 ? pwq.substring(0, qs) : pwq;
   }
-  const pathStart = urlWithoutProtocol.indexOf('/');
-  if (pathStart > -1) {
-    const pathWithQuery = urlWithoutProtocol.substring(pathStart);
-    const queryStart = pathWithQuery.indexOf('?');
-    pagePath = queryStart > -1 ? pathWithQuery.substring(0, queryStart) : pathWithQuery;
-  } else {
-    pagePath = '/';
-  }
-} else {
-  pagePath = '/';
 }
 
-// Build the payload
-const payload = {
+// ========================================================================
+// 6. BUILD PAYLOAD — matches /api/ingest/visit shape
+// ========================================================================
+var payload = {
   workspace_id: workspaceId,
-  visitor_id: clientId,
+  visitor_id: clientId || ('sgtm-bot-' + makeString(random)),
   session_id: makeString(sessionId),
   page_url: pageUrl,
   page_path: pagePath,
@@ -172,23 +270,34 @@ const payload = {
   screen_width: screenWidth,
   screen_height: screenHeight,
   language: language || null,
-  tracker_version: 'sgtm-1.0.0',
+  tracker_version: 'sgtm-2.0.0',
   event_type: eventType,
   event_name: eventName,
   timestamp: makeString(timestamp),
   rfc9421_signature: rfc9421Signature,
-  idempotency_key: idempotencyKey
+  idempotency_key: idempotencyKey,
+  sgtm_client: getEventData('x-sgtm-client') || 'GA4',
+  detected_bot: detectedBot,
+  bot_provider: botProvider
 };
 
-// Send to Loamly API
-const url = 'https://app.loamly.ai/api/ingest/visit';
+if (enableDebug) {
+  log('[Loamly sGTM] Sending to /api/ingest/visit:',
+    'ws=' + workspaceId, 'url=' + pageUrl,
+    'bot=' + (detectedBot || 'none'), 'v=sgtm-2.0.0');
+}
 
+// ========================================================================
+// 7. SEND TO LOAMLY — /api/ingest/visit (browser traffic endpoint)
+// ========================================================================
 sendHttpRequest(
-  url,
+  'https://app.loamly.ai/api/ingest/visit',
   function(statusCode, headers, body) {
     if (statusCode >= 200 && statusCode < 300) {
+      if (enableDebug) { log('[Loamly sGTM] OK:', makeString(statusCode)); }
       data.gtmOnSuccess();
     } else {
+      if (enableDebug) { log('[Loamly sGTM] FAIL:', makeString(statusCode), body); }
       data.gtmOnFailure();
     }
   },
@@ -210,65 +319,56 @@ ___SERVER_PERMISSIONS___
 [
   {
     "instance": {
-      "key": {
-        "publicId": "read_event_data",
-        "versionId": "1"
-      },
+      "key": { "publicId": "send_http", "versionId": "1" },
       "param": [
-        {
-          "key": "eventDataAccess",
-          "value": {
-            "type": 1,
-            "string": "any"
-          }
-        }
+        { "key": "allowedUrls", "value": { "type": 1, "string": "specific" } },
+        { "key": "urls", "value": { "type": 2, "listItem": [{ "type": 1, "string": "https://app.loamly.ai/*" }] } }
       ]
     },
-    "clientAnnotations": {
-      "isEditedByUser": true
-    },
+    "clientAnnotations": { "isEditedByUser": true },
     "isRequired": true
   },
   {
     "instance": {
-      "key": {
-        "publicId": "send_http",
-        "versionId": "1"
-      },
+      "key": { "publicId": "read_event_data", "versionId": "1" },
       "param": [
-        {
-          "key": "allowedUrls",
-          "value": {
-            "type": 1,
-            "string": "any"
-          }
-        }
+        { "key": "eventDataAccess", "value": { "type": 1, "string": "any" } }
       ]
     },
-    "clientAnnotations": {
-      "isEditedByUser": true
-    },
+    "clientAnnotations": { "isEditedByUser": true },
     "isRequired": true
   },
   {
     "instance": {
-      "key": {
-        "publicId": "read_request",
-        "versionId": "1"
-      },
+      "key": { "publicId": "read_request", "versionId": "1" },
       "param": [
         {
-          "key": "requestAccess",
+          "key": "headerWhitelist",
           "value": {
-            "type": 1,
-            "string": "any"
+            "type": 2,
+            "listItem": [
+              { "type": 3, "mapKey": [{ "type": 1, "string": "headerName" }], "mapValue": [{ "type": 1, "string": "user-agent" }] },
+              { "type": 3, "mapKey": [{ "type": 1, "string": "headerName" }], "mapValue": [{ "type": 1, "string": "referer" }] },
+              { "type": 3, "mapKey": [{ "type": 1, "string": "headerName" }], "mapValue": [{ "type": 1, "string": "signature" }] },
+              { "type": 3, "mapKey": [{ "type": 1, "string": "headerName" }], "mapValue": [{ "type": 1, "string": "signature-input" }] },
+              { "type": 3, "mapKey": [{ "type": 1, "string": "headerName" }], "mapValue": [{ "type": 1, "string": "signature-agent" }] }
+            ]
           }
-        }
+        },
+        { "key": "headersAllowed", "value": { "type": 1, "string": "specific" } }
       ]
     },
-    "clientAnnotations": {
-      "isEditedByUser": true
+    "clientAnnotations": { "isEditedByUser": true },
+    "isRequired": true
+  },
+  {
+    "instance": {
+      "key": { "publicId": "logging", "versionId": "1" },
+      "param": [
+        { "key": "environments", "value": { "type": 1, "string": "all" } }
+      ]
     },
+    "clientAnnotations": { "isEditedByUser": true },
     "isRequired": true
   }
 ]
@@ -281,6 +381,21 @@ scenarios: []
 
 ___NOTES___
 
-Created on 1/30/2026, 6:22:32 PM
+Created on 1/30/2026, 3:00:00 PM
+Updated on 2/11/2026
 
+Loamly Analytics Server-Side GTM Tag v2.0.0
 
+Data pipeline: GA4 browser events → /api/ingest/visit → visits table
+(Same pipeline as client-side t.js tracker)
+
+BREAKING CHANGES from v1:
+- rfc9421_signature is now a structured object {signature, signature_input, signature_agent}
+- tracker_version bumped to "sgtm-2.0.0"
+- Added read_request permission for getRequestHeader()
+- Added logging permission for debug mode
+
+Detects: ChatGPT-User, GPTBot, ClaudeBot, PerplexityBot, Googlebot-Extended,
+Gemini-Deep-Research, Meta-ExternalAgent, Applebot-Extended, Cohere-AI
+
+For documentation: https://loamly.ai/docs/integrations/gtm

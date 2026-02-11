@@ -4,7 +4,7 @@ Send Loamly tracking from your GTM Server Container.
 
 ## When to use this
 
-You already have a GTM Server Container running (Stape, Cloud Run, etc). This tag sends pageviews to Loamly server-side, with access to HTTP headers for AI agent detection.
+You already have a GTM Server Container running (Stape, Cloud Run, etc). This tag sends pageviews to Loamly server-side, with access to raw HTTP headers for AI agent detection and RFC 9421 signature capture.
 
 ## Prerequisites
 
@@ -43,8 +43,9 @@ You already have a GTM Server Container running (Stape, Cloud Run, etc). This ta
 | Workspace ID | Your Loamly workspace ID |
 | API Key | Your Loamly API key |
 | Event Type | Pageview or Custom Event |
-| Capture RFC 9421 | Detect AI agent signatures (on by default) |
-| Debug Logging | Log to server console |
+| Capture RFC 9421 | Reads Signature and Signature-Input headers from AI agents (on by default) |
+| Detect AI Bot UAs | Checks User-Agent for known AI bots: ChatGPT, Claude, Perplexity, Gemini, GPTBot, Meta, Apple, Cohere (on by default) |
+| Debug Logging | Logs to sGTM server console |
 
 ## How it works
 
@@ -52,6 +53,7 @@ You already have a GTM Server Container running (Stape, Cloud Run, etc). This ta
 Browser → gtag.js → Your sGTM (ss.example.com)
                          ↓
                Loamly tag fires
+               (reads raw HTTP headers)
                          ↓
                POST → app.loamly.ai/api/ingest/visit
 ```
