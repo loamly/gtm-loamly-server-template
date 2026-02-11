@@ -1,6 +1,15 @@
 homepage: "https://loamly.ai"
 documentation: "https://loamly.ai/docs/integrations/gtm"
 versions:
+  - sha: 155c0946477a88663c6fb352a5cbc200f2a57d28
+    changeNotes: |2
+      v3.0.0: Client template for AI bot detection (DNS proxy equivalent).
+      BREAKING: Changed from Tag to Client template using claimRequest().
+      Detects 12+ AI bot families via User-Agent matching.
+      Captures and parses RFC 9421 HTTP Message Signatures.
+      Sends to edge-visit pipeline (same as Cloudflare Worker / Fly.io proxy).
+      Non-blocking: returns instant 200 to bot, API call runs async.
+      Only claims bot requests — GA4 traffic passes through normally.
   - sha: bb9b8d0b556590d867b5417b6a190ad602f68026
     changeNotes: |2
       v2.0.0: Production-grade AI bot detection + RFC 9421.
